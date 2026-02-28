@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spacefish Disco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Jersey 10 pixel font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: rgb(6,10,26);
+      }
+
+      canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 0;
+      }
+
+      /* HUD */
+      .hud {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        pointer-events: none;
+        color: white;
+        font-family: "Jersey 10", sans-serif;
+        text-transform: uppercase;
+      }
+
+      /* Title */
+      .title {
+        position: absolute;
+        top: 4vh;
+        left: 4vw;
+        font-size: clamp(70px, 9vw, 120px);
+        line-height: 0.95;
+        letter-spacing: 1px;
+      }
+
+      /* Info block */
+      .info {
+        position: absolute;
+        bottom: 4vh;
+        left: 4vw;
+        max-width: 280px;
+        font-size: 20px;
+        line-height: 1.6;
+        opacity: 1.0;
+      }
+
+      .info .tagline {
+        margin-bottom: 12px;
+        opacity: 0.99;
+      }
+
+      .info .label {
+        margin-bottom: 6px;
+        font-size: 14px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <canvas id="canvasThree"></canvas>
+
+    <div class="hud">
+      <div class="title">
+        SPACEFISH<br />
+        DISCO
+      </div>
+
+      <div class="info">
+        <div class="tagline">
+          Spacefish love to party<br>
+          in caustic light.
+        </div>
+
+        <div class="label">Controls:<br>
+        Drag — Ripples<br>
+        Scroll — Zoom<br>
+        Right Drag — Orbit
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+
+  </body>
+</html>
